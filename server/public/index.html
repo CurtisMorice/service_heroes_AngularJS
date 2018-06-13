@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,13 +12,20 @@
 
     <!-- Controllers -->
     <script src="scripts/controllers/home.controller.js"></script>
+    <script src="scripts/controllers/heroes.controller.js"></script>
+    <script src="scripts/controllers/powers.controller.js"></script>
 
     <!-- Services -->
+    <script src="scripts/hero.services/hero.service.js"></script>
+
 
 </head>
+
 <body ng-app="HeroApp">
     <a href="#!">Home</a>
     <a href="#!powers">Powers</a>
+    <a href="#!heroes">Heroes</a>
     <ng-view></ng-view>
 </body>
+
 </html>

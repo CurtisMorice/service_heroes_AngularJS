@@ -1,7 +1,7 @@
 var pg = require('pg');
 
 var config = {
-    database: 'comicbook_heroes',
+    database: 'comicBook_heroes',
     host: 'localhost',
     port: '5432',
     max: 10,

@@ -1,7 +1,7 @@
 {
   "name": "angular-routing-and-services-heroes",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Before Lecture",
   "main": "server/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/PrimeAcademy/angular-routing-and-services-heroes.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Curtis Morice and Johnny Packard",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/PrimeAcademy/angular-routing-and-services-heroes/issues"
@@ -21,8 +21,9 @@
   "dependencies": {
     "angular": "^1.6.7",
     "angular-route": "^1.6.7",
-    "body-parser": "^1.18.2",
-    "express": "^4.16.2",
-    "pg": "^7.4.0"
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "pg": "^7.4.3",
+    "save": "^2.3.2"
   }
 }
