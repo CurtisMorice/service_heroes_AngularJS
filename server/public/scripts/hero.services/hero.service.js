@@ -3,24 +3,25 @@ app.service('HeroService', function($http) {
 
     console.log(`in HeroService`);
     let self = this;
-    let powersArray = [];
+    let superArray = [];
 
-    self.getPowers = function(url) {
-        console.log(`in GET powers service`);
+    self.getSuper = function(url) {
+        console.log(`in GET super service`, );
         return $http({
             method: 'GET',
             url: `/${url}`
         }).then((response) => {
             console.log(response);
-            self.powersArray = response.data;
+            console.log(`${url}`);
+            self.superArray = response.data;
         }).catch((error) => {
-            console.log(`error getting all songs:`, error);
+            console.log(`error getting all super:`, error);
         });
 
-    }
+    };
 
 
-    self.postPowers = function(url) {
+    self.postSuper = function(url) {
 
         return $http({
             method: 'POST',
@@ -45,7 +46,7 @@ app.service('HeroService', function($http) {
             console.log('back from POST with:', error);
         });
     };
-    self.updatePowers = function(url) {
+    self.updateSuper = function(url) {
 
         return $http({
             method: 'PUT',
