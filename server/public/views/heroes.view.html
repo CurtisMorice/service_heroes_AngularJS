@@ -1,1 +1,14 @@
 <h2>HEROES PAGE</h2>
+
+<table id="heroTable" class="table">
+    <thead>
+        <th><em>Name</em></th>
+        <th><em>Backstory</em></th>
+
+    </thead>
+    <tbody ng-repeat="hero in vm.displayHeroes">
+        <tr>{{hero.name}}</tr>
+        <tr>{{hero.backstory}}</tr>
+
+    </tbody>
+</table>
