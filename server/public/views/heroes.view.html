@@ -1,14 +1,41 @@
 <h2>HEROES PAGE</h2>
+<container>
+    <table ng-controller="HeroesController as vm" class="table">
 
-<table id="heroTable" class="table">
-    <thead>
-        <th><em>Name</em></th>
-        <th><em>Backstory</em></th>
+        <thead class="thead-dark">
+            <tr class="table-primary">
+                <th><em>Name</em></th>
+                <th><em>Backstory</em></th>
+            </tr>
+        </thead>
+        <tbody ng-repeat=" hero in vm.allHeroes ">
+            <tr class="table-primary">
+                <td>{{hero.name}}</td>
+                <td>{{hero.backstory}}</td>
+                <td><button class="btn btn-danger" ng-click="vm.deleteHero()">DELETE</button></td>
+            </tr>
 
-    </thead>
-    <tbody ng-repeat="hero in vm.displayHeroes">
-        <tr>{{hero.name}}</tr>
-        <tr>{{hero.backstory}}</tr>
+        </tbody>
+    </table>
+</container>
+<!-- <section ng-controller=" HeroesController as vm ">
+    <div id="HeroesPage " class="container ">
+        <div ng-repeat="hero in vm.allHeroes ">
+            <div class="row ">
+                <div class="col-sm-4 ">
+                    <div id="rentCard " class="card ">
+                        <div class="card-body ">
 
-    </tbody>
-</table>
+                            <div>
+                                <tr>{{hero.name}}</tr>
+                                <tr>{{hero.backstory}}</tr>
+                                <button class="btn btn-danger " ng-click="vm.deleteHero(hero.id) ">DELETE</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->

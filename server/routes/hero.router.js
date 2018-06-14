@@ -48,6 +48,20 @@ router.put('/', (req, res) => {
             console.log(`Error in PUT`, error);
             res.sendStatus(500);
         });
-
 });
+
+router.delete('/:id', (req, res) => {
+    const superId = req.params.id;
+    console.log('In hero DELETE router ', req.params.id);
+    const queryText = 'DELETE FROM listings WHERE id=$1';
+    pool.query(queryText, [superId])
+        .then((result) => {
+            console.log(`successful DELETE of listing`, result);
+            res.sendStatus(200);
+        })
+        .catch((error) => {
+            console.log(`Error DELETE`, error);
+            res.sendStatus(500);
+        });
+}); //end DELETE
 module.exports = router;

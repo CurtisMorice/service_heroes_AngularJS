@@ -6,7 +6,7 @@ app.service('HeroService', function($http) {
     let superArray = [];
 
     self.getSuper = function(url) {
-        console.log(`in GET super service`, );
+        console.log(`in GET super service`);
         return $http({
             method: 'GET',
             url: `/${url}`
@@ -58,5 +58,23 @@ app.service('HeroService', function($http) {
             console.log('back from POST with:', error);
         });
     };
+
+    self.deleteSuper = function(url) {
+        console.log('Delete!');
+        console.log(superDelete);
+        if (confirm('You gonna Kill Me?')) {
+            $http({
+                method: 'DELETE',
+                url: `/${url}/${url._id}`
+            }).then(function(response) {
+                self.getSuper();
+
+            }).catch(function(error) {
+                console.log('Error from DELETE', error);
+
+            })
+        }
+
+    }
 
 });

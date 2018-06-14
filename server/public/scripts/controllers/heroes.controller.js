@@ -18,9 +18,17 @@ app.controller('HeroesController', ['HeroService', function(HeroService) {
     };
     self.displayHeroes = function() {
         HeroService.getSuper('hero').then(function() {
-            self.allHeroes = HeroService.allHeroes;
+            self.allHeroes = HeroService.superArray;
         });
-    }
+    };
+
+    self.deleteHero = function() {
+        console.log(`in deleteHero`);
+        HeroService.deleteSuper('hero', hero.id).then(function() {
+            self.displayHeroes();
+        });
+    };
+
 
     self.displayHeroes();
 

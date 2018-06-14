@@ -1,1 +1,20 @@
 <h2>POWERS PAGE</h2>
+<container>
+    <table ng-controller="PowersController as vm" id="powersTable" class="table">
+
+        <thead>
+            <tr>
+                <th><em>Name</em></th>
+                <th><em>Description</em></th>
+            </tr>
+        </thead>
+        <tbody ng-repeat="powers in vm.allPowers">
+            <tr>
+                <td>{{powers.name}}</td>
+                <td>{{powers.description}}</td>
+                <td><button class="btn btn-danger" ng-click="deletePower(hero.id)">DELETE</button></td>
+            </tr>
+
+        </tbody>
+    </table>
+</container>

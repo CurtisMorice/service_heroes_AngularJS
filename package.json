@@ -20,6 +20,9 @@
   "homepage": "https://github.com/PrimeAcademy/angular-routing-and-services-heroes#readme",
   "dependencies": {
     "angular": "^1.6.7",
+    "angular-aria": "^1.7.2",
+    "angular-material": "^1.1.9",
+    "angular-messages": "^1.7.2",
     "angular-route": "^1.6.7",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
